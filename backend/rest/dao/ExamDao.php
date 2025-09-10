@@ -9,36 +9,15 @@ class ExamDao
    * constructor of dao class
    */
   public function __construct()
-{
-  try {
-    /** TODO
-     * List parameters such as servername, username, password, schema. Make sure to use appropriate port
-     */
-    $servername = "db1.ibu.edu.ba";
-    $schema     = "webfinalmakeup_db_1507";
-    $port       = "3306";
-    $username   = "webfinalmup_db_user2";
-    $password   = "webFinMup1507";
+  {
+    try {
+      /** TODO
+       * List parameters such as servername, username, password, schema. Make sure to use appropriate port
+       */
 
-    /** TODO
-     * Create new connection
-     */
-    $this->conn = new PDO(
-      "mysql:host={$servername};dbname={$schema};port={$port};charset=utf8mb4",
-      $username,
-      $password,
-      [
-        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-        PDO::ATTR_EMULATE_PREPARES   => false,
-      ]
-    );
-
-    echo "Connected successfully";
-  } catch (PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-  }
-}
+      /** TODO
+       * Create new connection
+       */
 
          $this->conn = new PDO(
                     "mysql:host=" . "db1.ibu.edu.ba" . ";dbname=" . "webfinalmakeup_db_1507" . ";port=" . "3306",
